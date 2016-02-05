@@ -1,0 +1,4 @@
+diff --git a/drivers/ata/libata-bmdma.c b/drivers/ata/libata-sff.c
+similarity index 100%
+rename from drivers/ata/libata-bmdma.c
+rename to drivers/ata/libata-sff.c

@@ -1,0 +1,22 @@
+diff --git a/Documentation/devicetree/bindings/ata/ahci-platform.txt b/Documentation/devicetree/bindings/ata/ahci-platform.txt
+new file mode 100644
+index 0000000..8bb8a76
+--- /dev/null
++++ b/Documentation/devicetree/bindings/ata/ahci-platform.txt
+@@ -0,0 +1,16 @@
++* AHCI SATA Controller
++
++SATA nodes are defined to describe on-chip Serial ATA controllers.
++Each SATA controller should have its own node.
++
++Required properties:
++- compatible        : compatible list, contains "calxeda,hb-ahci" or "snps,spear-ahci"
++- interrupts        : <interrupt mapping for SATA IRQ>
++- reg               : <registers mapping>
++
++Example:
++        sata@ffe08000 {
++               compatible = "calxeda,hb-ahci";
++                reg = <0xffe08000 0x1000>;
++                interrupts = <115>;
++        };

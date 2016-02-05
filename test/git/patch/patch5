@@ -1,0 +1,24 @@
+diff --git a/drivers/Makefile b/drivers/Makefile
+index f65deda..fda4467 100644
+--- a/drivers/Makefile
++++ b/drivers/Makefile
+@@ -10,6 +10,7 @@ obj-$(CONFIG_PCI)		+= pci/
+ obj-$(CONFIG_PARISC)		+= parisc/
+ obj-$(CONFIG_RAPIDIO)		+= rapidio/
+ obj-y				+= video/
++obj-y				+= gpu/
+ obj-$(CONFIG_ACPI)		+= acpi/
+ # PnP must come after ACPI since it will eventually need to check if acpi
+ # was used and do nothing if so
+diff --git a/drivers/char/Makefile b/drivers/char/Makefile
+index 4c1c584..81630a6 100644
+--- a/drivers/char/Makefile
++++ b/drivers/char/Makefile
+@@ -101,7 +101,6 @@ obj-$(CONFIG_TELCLOCK)		+= tlclk.o
+ 
+ obj-$(CONFIG_MWAVE)		+= mwave/
+ obj-$(CONFIG_AGP)		+= agp/
+-obj-$(CONFIG_DRM)		+= drm/
+ obj-$(CONFIG_PCMCIA)		+= pcmcia/
+ obj-$(CONFIG_IPMI_HANDLER)	+= ipmi/
+ 
